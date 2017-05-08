@@ -1,6 +1,11 @@
 # sysbench-cloud-mysql
 Cloud Mysql benchmark test using sysbench
 
+# run it
+```
+docker build -t sysbench . 
+docker run -e TEST_SYSTEM=test -e MYSQL_HOST=localhost -e MYSQL_USER=root -e MYSQL_PASSWORD=toor sysbench 
+```
 # links
 https://cloudplatform.googleblog.com/2016/08/Cloud-SQL-Second-Generation-performance-and-feature-deep-dive.html
 https://github.com/akopytov/sysbench
