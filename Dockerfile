@@ -9,4 +9,5 @@ RUN git clone https://github.com/akopytov/sysbench.git && \
  make -j8
 RUN ln -s /sysbench/src/sysbench /usr/bin/sysbench
 COPY entrypoint.sh /entrypoint.sh
+COPY run.sh /run.sh
 ENTRYPOINT ["/entrypoint.sh"]
