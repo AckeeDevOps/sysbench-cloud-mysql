@@ -9,25 +9,10 @@ fi
 
 
 #Test variables
-export test_system="$TEST_SYSTEM" 
 export mysql_host="$MYSQL_HOST"
 export mysql_user="$MYSQL_USER"
 export mysql_password="$MYSQL_PASSWORD"
-export test_path=~/oltp_${test_system}_1
-export test_name=01_baseline
 
-cd /sysbench
-#chmod a+x ./sysbench
+chmod a+x ./run.sh
 
-#Prepare test data
-sysbench \
-  --mysql-host=${mysql_host} \
-  --mysql-user=${mysql_user} \
-  --mysql-password=${mysql_password} \
-  --mysql-db="sbtest" \
-  --test=sysbench/tests/db/parallel_prepare.lua \
-  --oltp_tables_count=100 \
-  --oltp-table-size=20000000 \
-  --rand-init=on \
-  --num-threads=16 \
-  run
+./run.sh $mysql_host $mysql_user $mysql_password
