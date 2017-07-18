@@ -1,9 +1,9 @@
 #!/bin/bash
 
 folder='./data/'
-filea='104.155.95.120'
-fileb='benchmark.cpjghstwgewe.eu-west-1.rds.amazonaws.com'
-filec='35.189.239.238'
+filea='benchmark.ID.eu-west-1.sql.goodle.com'
+fileb='benchmark.ID.eu-west-1.rds.amazonaws.com'
+filec='benchmark.ID.customdomain.com'
 
 tpsFile='data-tps.csv'
 artFile='data-art.csv'
